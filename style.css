@@ -58,7 +58,8 @@ body {
     transition: color 0.3s ease;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: #3498db;
 }
 
@@ -156,16 +157,10 @@ body {
     transform: scale(1.05);
 }
 
-/* About Image Container */
 .about-image {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Remove placeholder if it exists */
-.placeholder-image {
-    display: none;
 }
 
 /* Quick Links */
@@ -228,43 +223,7 @@ body {
     }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background-color: #2c3e50;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-        padding: 2rem 0;
-    }
-    
-    .nav-menu.active {
-        left: 0;
-    }
-    
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .links-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Page Specific Styles */
+/* Page Header */
 .page-header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -289,12 +248,16 @@ body {
     padding-bottom: 0.5rem;
 }
 
+/* ⭐⭐⭐ TIMELINE (FULLY FIXED + RESPONSIVE) ⭐⭐⭐ */
+
 .timeline {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
+    padding: 40px 0;
 }
 
+/* Vertical Blue Line */
 .timeline::after {
     content: '';
     position: absolute;
@@ -306,11 +269,11 @@ body {
     margin-left: -3px;
 }
 
+/* Timeline Items */
 .timeline-item {
-    padding: 10px 40px;
+    padding: 20px 40px;
     position: relative;
     width: 50%;
-    box-sizing: border-box;
 }
 
 .timeline-item:nth-child(odd) {
@@ -324,10 +287,29 @@ body {
 .timeline-content {
     padding: 20px;
     background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+
+    /* Line moves left */
+    .timeline::after {
+        left: 20px;
+    }
+
+    /* Items go full width */
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 60px;
+        padding-right: 25px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -346,6 +328,7 @@ body {
     margin-bottom: 1rem;
 }
 
+/* Forms */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -390,6 +373,7 @@ body {
     background-color: #2980b9;
 }
 
+/* Social Links */
 .social-links {
     display: flex;
     justify-content: center;
@@ -409,4 +393,40 @@ body {
 .social-link:hover {
     background-color: #3498db;
     color: white;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 2rem 0;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
 }
