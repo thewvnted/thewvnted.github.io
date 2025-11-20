@@ -11,39 +11,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">My Journey</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="childhood.html" class="nav-link">Childhood</a>
-                </li>
-                <li class="nav-item">
-                    <a href="education.html" class="nav-link">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a href="skills.html" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="future.html" class="nav-link">Future</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+  
+   <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html" aria-label="Home page">My Journey</a>
         </div>
-    </nav>
+
+        <ul class="nav-menu" role="menubar">
+            <li class="nav-item" role="none">
+                <a href="index.html" class="nav-link active" role="menuitem" aria-label="Go to Home page">Home</a>
+            </li>
+            <li class="nav-item" role="none">
+                <a href="childhood.html" class="nav-link" role="menuitem" aria-label="Go to Childhood page">Childhood</a>
+            </li>
+            <li class="nav-item" role="none">
+                <a href="education.html" class="nav-link" role="menuitem" aria-label="Go to Education page">Education</a>
+            </li>
+            <li class="nav-item" role="none">
+                <a href="skills.html" class="nav-link" role="menuitem" aria-label="Go to Skills page">Skills</a>
+            </li>
+            <li class="nav-item" role="none">
+                <a href="future.html" class="nav-link" role="menuitem" aria-label="Go to Future page">Future</a>
+            </li>
+            <li class="nav-item" role="none">
+                <a href="contact.html" class="nav-link" role="menuitem" aria-label="Go to Contact page">Contact</a>
+            </li>
+        </ul>
+
+        <div class="hamburger" aria-label="Menu toggle button" role="button" tabindex="0">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+
 
     <header class="page-header">
         <div class="container">
@@ -115,4 +118,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
